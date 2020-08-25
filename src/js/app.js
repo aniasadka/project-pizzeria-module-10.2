@@ -33,7 +33,7 @@ const app = {
         event.preventDefault();
 
         /* get page Id from href attribute*/
-        const id = clickedElement.getAttribute('href').replace('#', '');
+        const id = clickedElement.getAttribute('href').replace('#', "");
 
         /* run thisApp.activatePage with that Id*/
         thisApp.activatePage(id);
