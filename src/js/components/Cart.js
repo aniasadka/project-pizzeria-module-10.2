@@ -4,40 +4,28 @@ import {
   classNames,
   templates
 } from '../settings.js';
-
 import {
   utils
 } from '../utils.js';
-
 import CartProduct from './CartProduct.js';
 
 class Cart {
   constructor(element) {
     const thisCart = this;
-
     thisCart.products = []; //  przechowuje produkty dodane do koszyka
-
     thisCart.deliveryFee = settings.cart.defaultDeliveryFee;
-
     thisCart.getElements(element);
     thisCart.initActions(element);
-
-
-    //console.log('new Cart', thisCart);
   }
 
   getElements(element) {
     const thisCart = this;
-
     thisCart.dom = {}; // przechowujemy tutaj wszystkie elementy DOM, wyszukane w komponencie koszyka. Ułatwi nam to ich nazewnictwo, ponieważ zamiast np. thisCart.amountElem będziemy mieli thisCart.dom.amount
-
     thisCart.dom.wrapper = element;
     thisCart.dom.toggleTrigger = element.querySelector(select.cart.toggleTrigger);
     //thisCart.dom.toggleTrigger.classList.toggle(classNames.cart.wrapperActive);
-
     // 9.3 - 4.Pamiętamy o zdefiniowaniu thisCart.dom.productList w metodzie getElements.
     thisCart.dom.productList = element.querySelector(select.cart.productList);
-
     //W metodzie getElements dodaj ten kod:
     thisCart.renderTotalsKeys = ['totalNumber', 'totalPrice', 'subtotalPrice', 'deliveryFee'];
 
