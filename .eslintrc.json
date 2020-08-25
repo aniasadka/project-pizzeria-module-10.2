@@ -14,13 +14,16 @@
       2
     ],
     "linebreak-style": [
+      0,
       "error",
       "unix"
     ],
     "quotes": [
       "error",
       "single",
-      {"allowTemplateLiterals": true}
+      {
+        "allowTemplateLiterals": true
+      }
     ],
     "semi": [
       "error",
