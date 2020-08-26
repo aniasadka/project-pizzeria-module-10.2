@@ -6,8 +6,20 @@ import {
 
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
+import Booking from './components/Booking.js';
 
 const app = {
+
+  initBooking: function () {
+    const thisApp = this;
+
+    // znajduje kontener widgetu do rezerwacji stron, którego selektor mamy zapisany w select.containerOf.booking
+    const booking = document.querySelector(select.containerOf.booking);
+    // tworzy nową instancję klasy Booking, którą za chwilę stworzymy, przekazując jej konstruktorowi znaleziony kontener widgetu,
+    thisApp.booking = new Booking(booking);
+
+  },
+
   initPages: function () {
     const thisApp = this;
 
@@ -123,7 +135,10 @@ const app = {
     thisApp.initData();
     // W metodzie app.init znajdź wywołanie metody initMenu i skasuj je.
     //thisApp.initMenu();
+
     thisApp.initCart();
+
+    thisApp.initBooking();
   },
 
 };
