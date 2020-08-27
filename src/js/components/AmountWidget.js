@@ -2,7 +2,7 @@ import {
   settings,
   select
 } from '../settings.js';
-import BaseWidget from './BaseWidget.js';
+import BaseWidget from './BaseWidgets.js';
 
 
 class AmountWidget extends BaseWidget {
