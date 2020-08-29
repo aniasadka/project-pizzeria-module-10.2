@@ -3,6 +3,7 @@ import {
   templates
 } from '../settings.js';
 import AmountWidget from './AmountWidget.js';
+import DatePicker from './DatePicker.js';
 
 class Booking {
   constructor(element) {
@@ -33,6 +34,9 @@ class Booking {
     thisBooking.dom.peopleAmount = thisBooking.dom.wrapper.querySelector(select.booking.peopleAmount);
     // analogicznie do peopleAmount znaleźć i zapisać element dla hoursAmount.
     thisBooking.dom.hoursAmount = thisBooking.dom.wrapper.querySelector(select.booking.hoursAmount);
+
+    // W klasie Booking w metodzie render stwórz właściwość thisBooking.dom.datePicker i zapisz w niej element pasujący do selektora zapisanego w select.widgets.datePicker.wrapper, wyszukany we wrapperze zapisanym w tej klasie
+    thisBooking.dom.datePicker = thisBooking.dom.wrapper.querySelector(select.widgets.datePicker.wrapper);
   }
 
   initWidgets() {
@@ -41,6 +45,9 @@ class Booking {
     // we właściwościach thisBooking.peopleAmount i thisBooking.hoursAmount zapisywać nowe instancje klasy AmountWidget, którym jako argument przekazujemy odpowiednie właściwości z obiektu thisBooking.dom.
     thisBooking.peopleAmount = new AmountWidget(thisBooking.dom.peopleAmount);
     thisBooking.hoursAmount = new AmountWidget(thisBooking.dom.hoursAmount);
+
+    // w metodzie initWidgets stwórz nową instancję klasy DatePicker zapisując ją do właściwości thisBooking.datePicker, analogicznie jak zrobiliśmy to dla obu instancji AmountWidget.
+    thisBooking.dtepicker = new DatePicker(thisBooking.dom.datePicker);
   }
 }
 
