@@ -10,7 +10,8 @@
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <link rel="stylesheet" href="vendor/range-slider.min.css">
+  <!-- date picker in DatePicker.js -->
+  <link rel="stylesheet" href="vendor/range-slider.min.css"> <!-- hour picker in HourPicker.js -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -24,12 +25,13 @@
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
         </div>
         <div class="main-nav">
+          <a href="#main-page">Main page</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
         </div>
         <div id="cart" class="cart">
           <div class="cart__summary">
-            <span class="cart__total-number">5</span>
+            <span class="cart__total-number">0</span>
             <span class="cart__total-price">Total price: $<strong>0</strong></span>
             <i class="fas fa-chevron-down"></i>
             <i class="fas fa-shopping-cart cart__icon"></i>
@@ -63,8 +65,129 @@
       </div>
     </div>
   </header>
-
   <div id="pages">
+    <section id="main-page">
+      <!-- Początek main-page -->
+      <div class="main-page-wrapper container">
+        <!-- -------------------------------------- -->
+        <div class="links-wrapper">
+          <div class="link-wrapper link-wrapper__order">
+            <a href="#order" class="nav-link nav-link-order">
+              <h2 class="nav-link__subtitle"> ORDER ONLINE</h2>
+              <p class="nav-link__hidden-subtitle">Delicious food right to your door</p>
+            </a>
+          </div>
+          <div class="link-wrapper link-wrapper__booking">
+            <a href="#booking" class="nav-link nav-link-booking">
+              <h2 class="nav-link__subtitle">book a table</h2>
+              <p class="nav-link__hidden-subtitle">Eat at our restaurant</p>
+            </a>
+          </div>
+        </div>
+        <!-- -------------------------------------- -->
+        <div class="hours-wrapper">
+          <div class="hours">
+            <h2>opening hours:</h2>
+            <p>tue - sun, 12pm - 12am</p>
+          </div>
+        </div>
+        <!-- -------------------------------------- -->
+        <div class="carousel-container">
+          <div class="carousel-image-wrapper">
+            <img src="images/main/pizza-3.jpg" alt="people eating pizza">
+          </div>
+
+          <!-- Slideshow container -->
+          <div class="carousel-review-wrapper slideshow-container">
+            <div class="opinion-element slides fade">
+              <div class="opinion-title"> AMAZING SERVICE </div>
+              <div class="opinion-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ex? Ratione
+                iure minus incidunt reprehenderit iusto sed consequuntur. Labore explicabo repellendus qui eum
+                praesentium quod veniam non, voluptatem aspernatur magnam!</div>
+              <div class="opinion-author"> JAN KOWALSKI </div>
+            </div>
+            <div class="opinion-element slides fade">
+              <div class="opinion-title"> BEST FOOD </div>
+              <div class="opinion-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni aliquid odit
+                adipisci voluptatem voluptas fugiat quaerat laboriosam saepe pariatur, recusandae eligendi ipsum.
+                Officiis quos delectus error facilis quod quae quo.</div>
+              <div class="opinion-author"> PETRONELA NIEWIEMJAKA </div>
+            </div>
+            <div class="opinion-element slides fade">
+              <div class="opinion-title"> TRUE VALUE </div>
+              <div class="opinion-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, delectus iusto.
+                Fugit dolores sapiente eos quos voluptatibus earum cumque, non excepturi eligendi maxime quo dicta est
+                natus quam, explicabo eveniet!</div>
+              <div class="opinion-author">MAKE LIFE HARDER </div>
+            </div>
+          </div>
+        </div>
+        <br />
+
+        <!-- KROPECZKI -->
+        <div class="dot-box">
+          <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <!-- -------------------------------------- -->
+        <div class="gallery-wrapper">
+          <div class="gal-image-wrapper">
+            <img class="gallery-image" src="images/main/pizza-4.jpg" alt="pizza">
+            <div class="icon-overlay">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+          <div class="gal-image-wrapper">
+            <img class="gallery-image" src="images/main/pizza-5.jpg" alt="pizza">
+            <div class="icon-overlay">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+          <div class="gal-image-wrapper">
+            <img class="gallery-image" src="images/main/pizza-6.jpg" alt="pizza">
+            <div class="icon-overlay">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+          <div class="gal-image-wrapper">
+            <img class="gallery-image" src="images/main/pizza-7.jpg" alt="pizza">
+            <div class="icon-overlay">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+          <div class="gal-image-wrapper">
+            <img class="gallery-image" src="images/main/pizza-8.jpg" alt="pizza">
+            <div class="icon-overlay">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+          <div class="gal-image-wrapper">
+            <img class="gallery-image" src="images/main/pizza-9.jpg" alt="pizza">
+            <div class="icon-overlay">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------------------------- -->
+        <div class="footer">
+          <a href="#">View more on Instagram</a>
+        </div>
+        <!-- -------------------------------------- -->
+      </div>
+
+    </section><!-- KONIEC SEKCJI: main-page -->
+
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
@@ -138,6 +261,7 @@
       </form>
     </div>
   </script>
+  <div id="product-list" class="product-list container"></div>
 
   <script id="template-cart-product" type="text/x-handlebars-template">
     <li>
@@ -225,7 +349,7 @@
               <div class="widget-amount"> <!-- widget-amount -->
                 <h3 class="product__params-title">Select quantity</h3>
                 <a class="btn-quantity" href="#less"><i class="fas fa-minus"></i></a>
-                <input class="amount" type="text" value="1">
+                <input class="amount" type="text">
                 <a class="btn-quantity" href="#more"><i class="fas fa-plus"></i></a>
               </div>
               <p class="product__total-price">
@@ -247,8 +371,8 @@
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-  <script src="vendor/range-slider.min.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> <!-- date picker in DatePicker.js -->
+  <script src="vendor/range-slider.min.js"></script> <!-- hour picker in HourPicker.js -->
   <script src="js/app.js" type="module"></script>
 </body>
 

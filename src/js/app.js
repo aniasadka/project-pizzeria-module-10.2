@@ -7,6 +7,7 @@ import {
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
+import MainPage from './components/MainPage.js';
 
 const app = {
 
@@ -121,6 +122,13 @@ const app = {
     });
   },
 
+  initMainPage: function () {
+    const thisApp = this;
+
+    thisApp.mainPageElement = document.querySelector(select.containerOf.mainPage);
+    thisApp.mainPage = new MainPage(thisApp.mainPageElement);
+  },
+
 
   init: function () {
     const thisApp = this;
@@ -139,6 +147,7 @@ const app = {
     thisApp.initCart();
 
     thisApp.initBooking();
+    thisApp.initMainPage();
   },
 
 };

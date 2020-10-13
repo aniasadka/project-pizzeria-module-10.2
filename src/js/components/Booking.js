@@ -150,23 +150,38 @@ export class Booking {
 
   updateDOM() {
     const thisBooking = this;
+    thisBooking.changeRangeSliderColor();
 
     thisBooking.date = thisBooking.datePicker.value;
     thisBooking.hour = utils.hourToNumber(thisBooking.hourPicker.value);
 
-    for (let domTables of thisBooking.dom.tables) {
-      let tableID = domTables.getAttribute(settings.booking.tableIdAttribute);
-      tableID = parseInt(tableID);
+    let allAvailable = false;
 
-      if (thisBooking.booked[thisBooking.date] && thisBooking.booked[thisBooking.date][thisBooking.hour] && thisBooking.booked[thisBooking.date][thisBooking.hour].includes(tableID)) {
-        domTables.classList.add(classNames.booking.tableBooked);
-      } else {
-        domTables.classList.remove(classNames.booking.tableBooked);
-        domTables.classList.remove(classNames.booking.tableUnbooked);
-      }
+    if (
+      typeof thisBooking.booked[thisBooking.date] == 'undefined'
+      ||
+      typeof thisBooking.booked[thisBooking.date][thisBooking.hour] == 'undefined'
+    ) {
+      allAvailable = true;
     }
 
-    thisBooking.rangeColor();
+    for (let table of thisBooking.dom.tables) {
+      let tableId = table.getAttribute(settings.booking.tableIdAttribute);
+      if (!isNaN(tableId)) {
+        tableId = parseInt(tableId);
+      }
+
+      if (
+        !allAvailable
+        &&
+        thisBooking.booked[thisBooking.date][thisBooking.hour].includes(tableId)
+      ) {
+        table.classList.add(classNames.booking.tableBooked);
+      } else {
+        table.classList.remove(classNames.booking.tableBooked);
+      }
+
+    }
   }
 
   tableSelect() {
@@ -193,8 +208,6 @@ export class Booking {
       });
     }
   }
-
-
 
   sendBooking() {
     const thisBooking = this;
