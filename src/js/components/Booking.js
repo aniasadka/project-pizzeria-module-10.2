@@ -150,7 +150,7 @@ export class Booking {
 
   updateDOM() {
     const thisBooking = this;
-    thisBooking.changeRangeSliderColor();
+    
 
     thisBooking.date = thisBooking.datePicker.value;
     thisBooking.hour = utils.hourToNumber(thisBooking.hourPicker.value);
